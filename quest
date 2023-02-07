@@ -13,6 +13,5 @@ all_href = soup.find_all('div', {'class': 'container-fluid etw-bgbox mb-4'})
 for m in all_href:
     print(m.get_text())
 
-1
-2
-3
+4
+5
