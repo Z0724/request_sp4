@@ -2,8 +2,7 @@ from bs4 import BeautifulSoup
 from urllib.request import urlopen
 
 # if has Chinese, apply decode()
-html = urlopen("https://invoice.etax.nat.gov.tw/").read().decode('utf-8')
-
+html = urlopen("https://invoice.etax.nat.gov.tw/").read().decode('UTF-8')
 
 soup = BeautifulSoup(html, features='lxml')
 all_href = soup.find_all('div', {'class': 'container-fluid etw-bgbox mb-4'})
@@ -12,6 +11,3 @@ all_href = soup.find_all('div', {'class': 'container-fluid etw-bgbox mb-4'})
 
 for m in all_href:
     print(m.get_text())
-
-4
-5
